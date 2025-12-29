@@ -69,3 +69,4 @@
     application: "{{ consul_win_bin_path }}\\consul.exe"
     arguments: "agent -config-dir={{ consul_win_configd_path }} {{ consul_win_agent_systemd_args }}"
     state: started
+  notify: Restart consul
